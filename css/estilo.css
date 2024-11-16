@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h3, p, ul, ol {
+    font-family: 'Indie Flower', cursive;
+}
+
+h2, h4, a {
+    font-family: "Quicksand", sans-serif;
+}
+
+main {
+    width: 1366px;
+    height: auto;
+    overflow: hidden;
+    background-image: url('../images/fondofresa.avif');
+    background-size: 30%;
+    margin: 0 auto;
+}
+
+
+header {
+    text-align: center;
+    background-color: #ffe2f0; 
+    padding: 20px;
+    border-bottom: 4px solid rgb(124, 227, 106); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.4s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.05); 
+}
+
+
+nav {
+    background-color: rgb(255, 79, 129); 
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    margin: 0 15px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 0.4s;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+}
+
+nav a:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+nav a:hover {
+    background-color: #ffaccb; 
+    color: rgb(255, 79, 129);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px); 
+}
+
+
+section {
+    width: 1346px;
+    margin-left: 10px;
+    margin-top: 50px;
+    background: rgba(255, 240, 247, 0.703);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    overflow: hidden;
+}
+
+
+section .titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(151, 53, 84); 
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    position: relative;
+    font-weight: bold;
+}
+
+section .titulo::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: rgb(124, 227, 106); 
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+section a {
+    color: white; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+    background-color: rgb(205, 65, 105);
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+section a:hover {
+    background-color: rgba(172, 107, 129, 0.6); 
+    color: rgb(255, 227, 235);
+    transform: translateY(-4px);
+}
+
+section a:focus {
+    outline: 2px solid rgb(156, 42, 103);
+    outline-offset: 4px;
+}
+
+section .izquierda{
+    width: 600px;
+    height: 1050px;
+    float: left;
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 69, 131, 0.701);
+    border-radius: 8px;
+    color: rgb(94, 28, 50);
+}
+
+.izquierda .texto1{
+    width: 550px;
+    height: 951px;
+    margin-left: 15px;
+    padding: 10px;
+    background-color: rgba(255, 194, 220, 0.7);
+    border-radius: 8px;
+    font-size: 22px;
+    color: rgb(94, 28, 50); 
+}
+
+.izquierda ul{
+    margin-left: 20px;
+}
+
+section .derecha{
+    width: 670px;
+    height: 1050px;
+    float: right;
+    position: relative;
+    margin-top: 20px;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 69, 131, 0.701);
+    border-radius: 8px;
+    color: rgb(94, 28, 50);
+}
+
+.derecha .texto2{
+    width: 610px;
+    height: 560px;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: rgba(255, 194, 220, 0.7);
+    border-radius: 8px;
+    font-size: 22px;
+    color: rgb(94, 28, 50);
+}
+
+.derecha .imagen{
+    width: 610px;
+    height: 350px;
+    margin-top: 40px;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: rgba(255, 194, 220, 0.7);
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.derecha .imagen img {
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.derecha .imagen img:hover {
+    transform: scale(1.05); 
+    filter: opacity(80%);
+    transition-duration: 0.4s;
+}
+
+/* Footer */
+footer {
+    height: 320px;
+    width: auto;
+    float: left;
+    background-color: rgba(255, 0, 76, 0.807); 
+    padding: 30px;
+    border-top: 4px solid rgb(124, 227, 106); 
+    margin-top: 40px;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(94, 28, 50);
+}
+
+footer .texto3 {
+    text-align: left;
+    width: 1215px;
+    height: 200px;
+    margin-left: 10px;
+    background-color: rgba(255, 172, 211, 0.9); 
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+    color: rgb(94, 28, 50);
+}
+
